@@ -1270,23 +1270,7 @@
         function style_NeviCompliantChargers_7_0() {
             return {
                 pane: 'pane_NeviCompliantChargers_7',
-                radius: 6.4,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(227,26,28,1.0)',
-                interactive: false,
-            }
-        }
-        function style_NeviCompliantChargers_7_1() {
-            return {
-                pane: 'pane_NeviCompliantChargers_7',
-                radius: 3.9999999999999987,
+                radius: 5.700000000000001,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1302,27 +1286,21 @@
         map.createPane('pane_NeviCompliantChargers_7');
         map.getPane('pane_NeviCompliantChargers_7').style.zIndex = 407;
         map.getPane('pane_NeviCompliantChargers_7').style['mix-blend-mode'] = 'normal';
-        var layer_NeviCompliantChargers_7 = new L.geoJson.multiStyle(json_NeviCompliantChargers_7, {
+        var layer_NeviCompliantChargers_7 = new L.geoJson(json_NeviCompliantChargers_7, {
             attribution: '',
             interactive: false,
             dataVar: 'json_NeviCompliantChargers_7',
             layerName: 'layer_NeviCompliantChargers_7',
             pane: 'pane_NeviCompliantChargers_7',
             onEachFeature: pop_NeviCompliantChargers_7,
-            pointToLayers: [function (feature, latlng) {
+            pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
                 return L.circleMarker(latlng, style_NeviCompliantChargers_7_0(feature));
-            },function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_NeviCompliantChargers_7_1(feature));
             },
-        ]});
+        });
         bounds_group.addLayer(layer_NeviCompliantChargers_7);
         map.addLayer(layer_NeviCompliantChargers_7);
         function pop_AlabamaColleges_8(feature, layer) {
@@ -1410,7 +1388,7 @@
         function style_AlabamaColleges_8_0() {
             return {
                 pane: 'pane_AlabamaColleges_8',
-                radius: 5.6,
+                radius: 5.33334,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1419,50 +1397,28 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(0,0,0,1.0)',
-                interactive: false,
-            }
-        }
-        function style_AlabamaColleges_8_1() {
-            return {
-                pane: 'pane_AlabamaColleges_8',
-                radius: 4.533334000000001,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(217,27,198,1.0)',
+                fillColor: 'rgba(31,120,180,1.0)',
                 interactive: false,
             }
         }
         map.createPane('pane_AlabamaColleges_8');
         map.getPane('pane_AlabamaColleges_8').style.zIndex = 408;
         map.getPane('pane_AlabamaColleges_8').style['mix-blend-mode'] = 'normal';
-        var layer_AlabamaColleges_8 = new L.geoJson.multiStyle(json_AlabamaColleges_8, {
+        var layer_AlabamaColleges_8 = new L.geoJson(json_AlabamaColleges_8, {
             attribution: '',
             interactive: false,
             dataVar: 'json_AlabamaColleges_8',
             layerName: 'layer_AlabamaColleges_8',
             pane: 'pane_AlabamaColleges_8',
             onEachFeature: pop_AlabamaColleges_8,
-            pointToLayers: [function (feature, latlng) {
+            pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
                 return L.circleMarker(latlng, style_AlabamaColleges_8_0(feature));
-            },function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_AlabamaColleges_8_1(feature));
             },
-        ]});
+        });
         bounds_group.addLayer(layer_AlabamaColleges_8);
         map.addLayer(layer_AlabamaColleges_8);
         function pop_OtherCulversall_alabama_culvers_w_status_9(feature, layer) {
