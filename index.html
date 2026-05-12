@@ -50,7 +50,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[31.894506128200444,-87.84072742383927],[35.17506614748236,-83.47430501737215]]);
+        }).fitBounds([[31.894506128200444,-88.89529327746581],[35.17506614748236,-82.41973916374562]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -448,10 +448,10 @@
                 pane: 'pane_1MileBuffer_3',
                 opacity: 1,
                 color: 'rgba(255,0,0,1.0)',
-                dashArray: '15.0,3.0',
+                dashArray: '10.0,2.0',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 3.0, 
+                weight: 2.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(152,125,183,0.0)',
@@ -568,10 +568,10 @@
                 pane: 'pane_4MileBuffer_4',
                 opacity: 1,
                 color: 'rgba(255,0,0,0.503)',
-                dashArray: '15.0,3.0',
+                dashArray: '10.0,2.0',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 3.0, 
+                weight: 2.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(229,182,54,0.0)',
@@ -688,10 +688,10 @@
                 pane: 'pane_5MileBuffer_5',
                 opacity: 1,
                 color: 'rgba(255,0,0,0.752)',
-                dashArray: '15.0,3.0',
+                dashArray: '10.0,2.0',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 3.0, 
+                weight: 2.0, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(145,82,45,0.0)',
@@ -950,23 +950,7 @@
         function style_BamaDCPublicStations_6_0() {
             return {
                 pane: 'pane_BamaDCPublicStations_6',
-                radius: 4.800000000000001,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(2,255,0,1.0)',
-                interactive: false,
-            }
-        }
-        function style_BamaDCPublicStations_6_1() {
-            return {
-                pane: 'pane_BamaDCPublicStations_6',
-                radius: 4.800000000000001,
+                radius: 6.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -982,27 +966,21 @@
         map.createPane('pane_BamaDCPublicStations_6');
         map.getPane('pane_BamaDCPublicStations_6').style.zIndex = 406;
         map.getPane('pane_BamaDCPublicStations_6').style['mix-blend-mode'] = 'normal';
-        var layer_BamaDCPublicStations_6 = new L.geoJson.multiStyle(json_BamaDCPublicStations_6, {
+        var layer_BamaDCPublicStations_6 = new L.geoJson(json_BamaDCPublicStations_6, {
             attribution: '',
             interactive: false,
             dataVar: 'json_BamaDCPublicStations_6',
             layerName: 'layer_BamaDCPublicStations_6',
             pane: 'pane_BamaDCPublicStations_6',
             onEachFeature: pop_BamaDCPublicStations_6,
-            pointToLayers: [function (feature, latlng) {
+            pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
                 return L.circleMarker(latlng, style_BamaDCPublicStations_6_0(feature));
-            },function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_BamaDCPublicStations_6_1(feature));
             },
-        ]});
+        });
         bounds_group.addLayer(layer_BamaDCPublicStations_6);
         map.addLayer(layer_BamaDCPublicStations_6);
         function pop_NeviCompliantChargers_7(feature, layer) {
@@ -1270,7 +1248,7 @@
         function style_NeviCompliantChargers_7_0() {
             return {
                 pane: 'pane_NeviCompliantChargers_7',
-                radius: 5.700000000000001,
+                radius: 5.7,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1388,7 +1366,7 @@
         function style_AlabamaColleges_8_0() {
             return {
                 pane: 'pane_AlabamaColleges_8',
-                radius: 5.33334,
+                radius: 6.13334,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
